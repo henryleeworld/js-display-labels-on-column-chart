@@ -209,6 +209,7 @@ var config = {
 };
 
 window.onload = function() {
+    Chart.plugins.register(ChartDataLabels);
     var ctx = document.getElementById('chart-area').getContext('2d');
     window.columnChart = new Chart(ctx, config);
 };
