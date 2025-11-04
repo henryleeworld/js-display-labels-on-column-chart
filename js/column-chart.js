@@ -181,29 +181,28 @@ var config = {
         animation: {
             onComplete: done
         },
-        /*
-        title: {
-            display: true,
-            text: 'Chart.js Bar Chart'
-        },
-        */
         plugins: {
             datalabels: {
                 color: 'white',
-                /*
-                display: function(context) {
-                    return context.dataset.data[context.dataIndex] > 15;
-                },
-                */
                 font: {
                     weight: 'bold'
                 },
                 formatter: Math.round
+                // display: ctx => ctx.dataset.data[ctx.dataIndex] > 15
             },
             legend: {
-                onClick: function(event, legendItem) {},
                 position: 'bottom',
+                onClick: function(event, legendItem) {},
             },
+            /*
+            title: {
+                display: false,
+                text: 'Chart.js Column Chart'
+            },
+            */
+            tooltip: {
+                enabled: true
+            }
         },
     }
 };
@@ -217,4 +216,6 @@ window.onload = function() {
 function done() {
     var url = window.columnChart.toBase64Image();
     document.getElementById("chart-url").src = url;
+    document.getElementById('chart-area').style.display = 'none';
+    document.getElementById('chart-url').classList.remove('d-none');
 }

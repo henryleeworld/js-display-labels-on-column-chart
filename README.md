@@ -11,5 +11,5 @@ $ git clone
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/6k9bpOb.png)
+![](https://i.imgur.com/YcsNPfp.png)
 > 柱狀圖利用柱子的高度，反映資料的差異。肉眼對高度差異很敏感，辨識效果非常好。柱狀圖的局限在於只適用中小規模的資料集
